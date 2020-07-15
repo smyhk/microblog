@@ -5,7 +5,7 @@ from app import login
 from flask_login import UserMixin
 
 
-# User loader to persist across applications pages
+# User loader to persist across application pages
 @login.user_loader
 def load_user(id):
   return User.query.get(int(id))
