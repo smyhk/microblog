@@ -7,6 +7,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User
 
 
+# Executes on every user request event
 @app.before_request
 def before_request():
     if current_user.is_authenticated:
