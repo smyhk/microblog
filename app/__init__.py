@@ -8,6 +8,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bs4 import Bootstrap
+from flask_moment import Moment
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -17,6 +18,7 @@ login = LoginManager(app)
 login.login_view = 'login'
 mail = Mail(app)
 bootstrap = Bootstrap(app)
+moment = Moment(app)
 
 # Emailer and logger for errors in production
 if not app.debug:
